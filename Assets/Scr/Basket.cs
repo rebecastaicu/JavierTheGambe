@@ -43,7 +43,7 @@ public class Basket : MonoBehaviour
             score++;
             UpdateScoreText(); // Actualizar el marcador de puntuación
 
-            // Puedes agregar aquí cualquier otra acción que quieras realizar al anotar, como reproducir un sonido o mostrar un efecto visual.
+            // Agregar aquí cualquier otra acción a realizar al anotar, como reproducir un sonido o mostrar un efecto visual.
 
             // Reubicar la pelota
             RespawnBall();
