@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 36f04c703a2478c42b76907c0a13fc3a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cocoPrefab: {fileID: 919132149155446097, guid: 0f362398853cfe14080df9a5934dbf0f,
+      type: 3}
+  - puntoDeLanzamiento: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
