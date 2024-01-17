@@ -3,8 +3,8 @@ using UnityEngine;
 public class ControladorBaloncesto : MonoBehaviour
 {
     private int puntos = 0;
-    private int puntosParaGanar = 10; // Puntos necesarios para ganar el minijuego
-    public DInamicaJuego dinamicaJuego; // Referencia al script principal para los cocos
+    private int puntosParaGanar = 5; // Puntos necesarios para ganar el minijuego
+    public DinamicaJuego dinamicaJuego; // Referencia al script principal para los cocos
 
     // Llamar este método cuando un coco entre en la canasta
     public void EncestarCoco()
@@ -24,8 +24,5 @@ public class ControladorBaloncesto : MonoBehaviour
         // Que sucede cuando el jugador gana el minijuego
 
         Debug.Log("¡Minijuego ganado!");
-
-        // Llamar a una función en DInamicaJuego para indicar que el minijuego ha sido completado.
-        dinamicaJuego.CompleteMinigame(2); // Este es el tercer minijuego
     }
 }

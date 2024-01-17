@@ -6,7 +6,7 @@ public class ControladorBolos : MonoBehaviour
     private int tiradasRestantes = 3;
     private int partidasJugadas = 0;
     private const int MaxPartidas = 3;
-    public DInamicaJuego dinamicaJuego; // Referencia al script principal para los cocos
+    public DinamicaJuego dinamicaJuego; // Referencia al script principal para los cocos
     public GameObject[] bolos; // Asigna los objetos de los bolos aquí
     public GameObject cocoPrefab; // Asigna tu prefab de coco aquí
     public Transform puntoDeLanzamiento; // Asigna el punto desde donde se lanzarán los cocos
@@ -23,7 +23,7 @@ public class ControladorBolos : MonoBehaviour
         if (bolosDerribadosTotal >= 20)
         {
             dinamicaJuego.AddCocos(10); // Suma 10 cocos al marcador principal
-            dinamicaJuego.CompleteMinigame(1); // Indica que el minijuego ha sido completado
+            // dinamicaJuego.CompleteMinigame(1); // Indica que el minijuego ha sido completado (Removed)
         }
     }
 

@@ -7,7 +7,7 @@ public class ControladorMinigolf : MonoBehaviour
     private float tiempoRestante = 180f; // 3 minutos
     private bool minijuegoActivo = false;
 
-    public DInamicaJuego dinamicaJuego; // Referencia al script principal
+    public DinamicaJuego dinamicaJuego; // Referencia al script principal
 
     void Start()
     {
