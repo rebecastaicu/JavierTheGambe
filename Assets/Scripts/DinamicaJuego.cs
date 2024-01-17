@@ -31,7 +31,15 @@ public class DinamicaJuego : MonoBehaviour
     {
         cocosCounter += amount;
     }
-
+    // Método para restar cocos del contador
+    public void SubtractCocos(int amount)
+    {
+        cocosCounter -= amount;
+        if (cocosCounter < 0)
+        {
+            cocosCounter = 0; // Asegurarse de que el contador no sea negativo
+        }
+    }
     // Método para obtener el contador actual de cocos
     public int GetCocosCount()
     {

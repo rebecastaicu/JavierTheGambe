@@ -3,7 +3,11 @@ guid: a2619ad1f304a8e4fa77524888871c9c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - dinamicaJuego: {instanceID: 0}
+  - cocoPrefab: {fileID: 6167127548015499698, guid: b5a3e3b351bcecd4790f6653f903a1dd,
+      type: 3}
+  - puntoDeLanzamiento: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
