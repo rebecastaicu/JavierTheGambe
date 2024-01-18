@@ -330,7 +330,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2619ad1f304a8e4fa77524888871c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aparicionBolos: {fileID: 0}
+  bolos: []
+  cocoPrefab: {fileID: 984264240}
+  puntoDeLanzamiento: {fileID: 656330711}
 --- !u!4 &287875618 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee,
@@ -1462,6 +1464,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7730061999879829095}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &984264240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4526324035994436091, guid: 2d08920b65a9310419d6efcbbc0c4529,
+    type: 3}
+  m_PrefabInstance: {fileID: 7730061999879829095}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1002277818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1917,7 +1925,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableButton: {fileID: 1044804525}
   controladorBolos: {fileID: 232936091}
-  aparicionBolos: {fileID: 0}
 --- !u!1 &1047694946 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7029948723529949830, guid: 356ba4070568db844bb9542ba5768a68,
