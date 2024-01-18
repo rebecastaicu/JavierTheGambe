@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - cocoPrefab: {fileID: 919132149155446097, guid: 0f362398853cfe14080df9a5934dbf0f,
+  - cocoPrefab: {fileID: 3377038522978940366, guid: d3df8e6f84c865349ac952ed23631858,
       type: 3}
   - puntoDeLanzamiento: {instanceID: 0}
   executionOrder: 0

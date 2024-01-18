@@ -2,52 +2,46 @@ using UnityEngine;
 
 public class ControladorBeisbol : MonoBehaviour
 {
-    // Evento que se llama para iniciar el minijuego
+    public static ControladorBeisbol Instance { get; private set; }
+    public CuentaAtrasBeisbol temporizador; // Referencia al script del temporizador
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    // Método para iniciar el juego y activar el temporizador
     public void IniciarJuego()
     {
-        Debug.Log("Minijuego de béisbol iniciado");
-        // Inicializar otros componentes necesarios para el juego aquí
+        Debug.Log("Juego de béisbol iniciado. El tiempo comienza a contar.");
+        temporizador.ActivarTemporizador(); // Activa el temporizador
     }
 
-    // Método que se llama cuando el jugador batea correctamente
-    public void BatearCoco()
-    {
-        // Puedes elegir añadir cocos al contador si esto representa puntos ganados
-        DinamicaJuego.Instance.AddCocos(1);
-        // O también puedes evitar la pérdida de cocos si esto representa una defensa exitosa
-    }
-
-    // Método que se llama para verificar la victoria o la derrota basada en el contador de cocos
-    public void VerificarEstadoJuego()
-    {
-        if (DinamicaJuego.Instance.GetCocosCount() <= 0)
-        {
-            PerderJuego();
-        }
-    }
-
-    // Método que se llama cuando el tiempo se acaba para determinar el resultado del juego
+    // Método para finalizar el juego
     public void FinalizarJuego()
     {
-        if (DinamicaJuego.Instance.GetCocosCount() > 0)
-        {
-            GanarJuego();
-        }
-        else
-        {
-            PerderJuego();
-        }
+        Debug.Log("Juego de béisbol finalizado.");
+        // Aquí puedes agregar la lógica para manejar el final del juego
     }
 
-    private void GanarJuego()
+    // Método que se llama cuando el coco es bateado.
+    public void BatearCoco()
     {
-        Debug.Log("¡Has ganado el minijuego de béisbol!");
-        // Implementa la lógica para cuando el jugador gana el juego
+        DinamicaJuego.Instance.AddCocos(1);
+        Debug.Log("Bateo exitoso! Se añade un coco.");
     }
 
-    private void PerderJuego()
+    // Método que se llama cuando se falla el bateo.
+    public void FallarBateo()
     {
-        Debug.Log("Has perdido el minijuego de béisbol.");
-        // Implementa la lógica para cuando el jugador pierde el juego
+        DinamicaJuego.Instance.SubtractCocos(1);
+        Debug.Log("Bateo fallido. Se resta un coco.");
     }
 }
