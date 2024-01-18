@@ -5,6 +5,7 @@ public class BotonBolos : MonoBehaviour
 {
     public XRBaseInteractable interactableButton; // Referencia al botón interactuable
     public ControladorBolos controladorBolos; // Referencia al controlador de bolos
+    public AparicionObjetosBolos aparicionBolos; // Referencia al script de aparición de bolos
 
     private void OnEnable()
     {
@@ -18,20 +19,41 @@ public class BotonBolos : MonoBehaviour
 
     private void HandleButtonPress(SelectEnterEventArgs args)
     {
-        // Obtener el objeto interactor desde los argumentos
-        XRBaseInteractor interactor = args.interactorObject as XRBaseInteractor;
-
         int cocosCount = DinamicaJuego.Instance.GetCocosCount();
 
         if (cocosCount >= 10)
         {
-            // Ejecutar el minijuego de los bolos, generando un coco
-            controladorBolos.GenerarCoco();
+            Debug.Log("Iniciando el minijuego de bolos.");
+            IniciarMinijuegoBolos();
         }
         else
         {
-            // Aquí puedes manejar la lógica si no se han recogido suficientes cocos
             Debug.Log("Debes recoger más cocos para jugar a los bolos.");
         }
     }
+
+    private void IniciarMinijuegoBolos()
+    {
+        if (aparicionBolos != null)
+        {
+            aparicionBolos.PosicionarBolos();
+            aparicionBolos.VerificarYColocarCoco();
+        }
+    }
+
+    public void FinalizarMinijuegoBolos()
+    {
+        // Aquí puedes implementar la lógica para finalizar el juego
+        Debug.Log("Minijuego de bolos finalizado.");
+
+        // Ejemplo: Desactivar los bolos y el coco
+        if (aparicionBolos != null)
+        {
+            aparicionBolos.DesactivarBolosYCoco();
+        }
+
+        
+    }
 }
+
+

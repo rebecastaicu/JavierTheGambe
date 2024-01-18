@@ -2,46 +2,47 @@ using UnityEngine;
 
 public class ControladorBolos : MonoBehaviour
 {
+    public AparicionObjetosBolos aparicionBolos; // Referencia al script AparicionObjetosBolos
     private int bolosDerribadosTotal = 0;
-    public GameObject[] bolos; // Asigna los objetos de los bolos aquí
-    public GameObject cocoPrefab; // Asigna tu prefab de coco aquí
-    public Transform puntoDeLanzamiento; // Asigna el punto desde donde se lanzarán los cocos
+    private int totalBolos = 10; // Total de bolos en la partida
+
+    // Referencia al script DinamicaJuego
+    private DinamicaJuego dinamicaJuego;
 
     private void Start()
     {
-        // Inicializa los bolos para la primera partida
-        ResetearBolos();
+        if (aparicionBolos != null)
+        {
+            aparicionBolos.PosicionarBolos();
+            aparicionBolos.VerificarYColocarCoco();
+        }
+
+        // Encuentra el script DinamicaJuego en la escena
+        dinamicaJuego = FindObjectOfType<DinamicaJuego>();
     }
 
     public void DerribarBolo()
     {
         bolosDerribadosTotal++;
-        // Aquí puedes agregar cualquier lógica adicional necesaria cuando un bolo es derribado
-    }
-
-    public void LanzamientoRealizado()
-    {
-        // Esta función podría ser útil si se necesita realizar alguna acción después de cada lanzamiento
-    }
-
-    private void ResetearBolos()
-    {
-        foreach (GameObject bolo in bolos)
+        // Verifica si todos los bolos han sido derribados
+        if (bolosDerribadosTotal == totalBolos)
         {
-            bolo.SetActive(true); // Reactiva los bolos
-            // Se asume que Bolo es un script adjunto a cada bolo con su posición y rotación inicial
-            Bolo datosBolo = bolo.GetComponent<Bolo>();
-            if (datosBolo != null)
-            {
-                bolo.transform.position = datosBolo.posicionInicial;
-                bolo.transform.rotation = datosBolo.rotacionInicial;
-                datosBolo.derribado = false;
-            }
+            // Añadir 10 cocos al contador general en DinamicaJuego
+            dinamicaJuego.AddCocos(10);
+            // Finalizar el minijuego de bolos
+            FinalizarJuego();
         }
     }
 
-    public void GenerarCoco()
+    public void FinalizarJuego()
     {
-        Instantiate(cocoPrefab, puntoDeLanzamiento.position, puntoDeLanzamiento.rotation);
+        // Aquí puedes implementar la lógica para finalizar el juego
+        // Por ejemplo, mostrar un mensaje de victoria, detener el juego, etc.
+        Debug.Log("¡Minijuego de bolos finalizado!");
+
+        // Otras acciones para finalizar el juego...
     }
+
+    // Agrega cualquier otra lógica específica del juego que necesites aquí
 }
+
