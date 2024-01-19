@@ -22,6 +22,10 @@ public class LanzadorCoco : MonoBehaviour
             {
                 rb.AddForce(puntoDeLanzamiento.forward * fuerzaDeLanzamiento, ForceMode.Impulse);
             }
+
+            // Destruir el coco después de 3 segundos
+            Destroy(coco, 3f);
         }
     }
 }
+

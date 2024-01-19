@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class AparicionCocoGolf : MonoBehaviour
 {
-    public GameObject cocoPrefab; // Asigna el prefab del coco aquí
-    private GameObject cocoActual; // Almacena la instancia actual del coco
+    public GameObject cocoPrefab;
+    private GameObject cocoActual;
 
     void Start()
     {

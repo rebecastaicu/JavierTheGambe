@@ -6,7 +6,7 @@ public class CuentaAtrasBeisbol : MonoBehaviour
 {
     public TextMeshProUGUI textoDeTiempo; // Texto en pantalla para mostrar el tiempo restante
     private float tiempoRestante = 180f; // Tiempo total del juego en segundos (180 segundos = 3 minutos)
-    public ControladorBeisbol controladorBeisbol; // Conecta este script con el ControladorBeisbol
+    public ControladorBeisbol controladorBeisbol; 
 
     void Start()
     {

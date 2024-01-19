@@ -28,7 +28,6 @@ public class ControladorBeisbol : MonoBehaviour
     public void FinalizarJuego()
     {
         Debug.Log("Juego de béisbol finalizado.");
-        // Aquí puedes agregar la lógica para manejar el final del juego
     }
 
     // Método que se llama cuando el coco es bateado.

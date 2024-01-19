@@ -3,7 +3,9 @@ guid: 6393c64399384ac4aa9b5afabe5a8480
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cocoPrefab: {fileID: 3377038522978940366, guid: d3df8e6f84c865349ac952ed23631858,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -33,7 +33,7 @@ public class Bolo : MonoBehaviour
         transform.position = posicionInicial;
         transform.rotation = rotacionInicial;
         derribado = false;
-        // Reactivar físicas o cualquier otro componente necesario
+        // Reactivar físicas
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
         {

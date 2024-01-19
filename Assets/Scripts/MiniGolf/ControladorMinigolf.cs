@@ -41,8 +41,6 @@ public class ControladorMinigolf : MonoBehaviour
 
     private void FinalizarMinijuego()
     {
-        // Aquí puedes agregar la lógica para finalizar el minijuego
-        // Por ejemplo, desactivar el juego, mostrar un mensaje, etc.
         Debug.Log("Minijuego finalizado");
     }
 }

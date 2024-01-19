@@ -21,7 +21,7 @@ public class BotonBolos : MonoBehaviour
     {
         int cocosCount = DinamicaJuego.Instance.GetCocosCount();
 
-        if (cocosCount >= 10)
+        if (cocosCount >= 0)
         {
             Debug.Log("Iniciando el minijuego de bolos.");
             IniciarMinijuegoBolos();
@@ -43,10 +43,10 @@ public class BotonBolos : MonoBehaviour
 
     public void FinalizarMinijuegoBolos()
     {
-        // Aquí puedes implementar la lógica para finalizar el juego
+       
         Debug.Log("Minijuego de bolos finalizado.");
 
-        // Ejemplo: Desactivar los bolos y el coco
+        //Desactivar los bolos y el coco
         if (aparicionBolos != null)
         {
             aparicionBolos.DesactivarBolosYCoco();

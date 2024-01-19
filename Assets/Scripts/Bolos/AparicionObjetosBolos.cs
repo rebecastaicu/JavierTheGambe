@@ -24,7 +24,7 @@ public class AparicionObjetosBolos : MonoBehaviour
             for (int i = 0; i <= fila; i++)
             {
                 GameObject bolo = Instantiate(boloPrefab, currentPosition, Quaternion.identity);
-                bolo.transform.SetParent(transform); // Opcional: establecer como hijo del manager
+                bolo.transform.SetParent(transform);
                 currentPosition.x += distanciaEntreBolos;
             }
 

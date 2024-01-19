@@ -36,13 +36,12 @@ public class ControladorBolos : MonoBehaviour
 
     public void FinalizarJuego()
     {
-        // Aquí puedes implementar la lógica para finalizar el juego
-        // Por ejemplo, mostrar un mensaje de victoria, detener el juego, etc.
+        
         Debug.Log("¡Minijuego de bolos finalizado!");
 
-        // Otras acciones para finalizar el juego...
+       
     }
 
-    // Agrega cualquier otra lógica específica del juego que necesites aquí
+
 }
 

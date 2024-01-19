@@ -7,7 +7,7 @@ public class ControladorBaloncesto : MonoBehaviour
     private int puntosParaGanar = 5; // Puntos necesarios para ganar el minijuego
     public DinamicaJuego dinamicaJuego; // Referencia al script principal para los cocos
 
-    // Este método se llama cuando un coco es encestado correctamente
+    // Llamar al método  cuando un coco es encestado correctamente
     public void EncestarCoco()
     {
         puntos++;
@@ -23,7 +23,6 @@ public class ControladorBaloncesto : MonoBehaviour
     // Este método se llama cuando el jugador alcanza los puntos necesarios para ganar
     private void GanarMinijuego()
     {
-        // Que sucede cuando el jugador gana el minijuego
         Debug.Log("¡Minijuego ganado!");
         FinalizarJuego();
     }

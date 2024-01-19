@@ -4,9 +4,9 @@ using TMPro; // Usando TextMeshPro
 
 public class CuentaAtras : MonoBehaviour
 {
-    public TextMeshProUGUI textoDeTiempo; // Referencia al componente Text que mostrará el tiempo
+    public TextMeshProUGUI textoDeTiempo; // Referencia al Text que mostrará el tiempo
     private float tiempoRestante = 180f; // 3 minutos en segundos
-    public ControladorBaloncesto controladorBaloncesto; // Asegúrate de asignar esto en el Inspector
+    public ControladorBaloncesto controladorBaloncesto;
 
     void Start()
     {
@@ -31,7 +31,7 @@ public class CuentaAtras : MonoBehaviour
             int segundos = Mathf.FloorToInt(tiempoRestante % 60);
 
             // Actualiza el texto del UI
-            textoDeTiempo.text = string.Format("{0:00}:{1:00}", minutos, segundos); // Corrige el nombre de la variable aquí también
+            textoDeTiempo.text = string.Format("{0:00}:{1:00}", minutos, segundos); 
 
             yield return null; // Espera un frame antes de continuar el bucle
         }
