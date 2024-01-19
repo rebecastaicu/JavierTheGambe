@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 6167127548015499698, guid: b5a3e3b351bcecd4790f6653f903a1dd,
         type: 3}
       propertyPath: m_Name
-      value: CocoBolos
+      value: CocoBolos Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6167127548015499700, guid: b5a3e3b351bcecd4790f6653f903a1dd,
         type: 3}
