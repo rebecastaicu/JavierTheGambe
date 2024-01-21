@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15214756, g: 0.28559113, b: 0.4699618, a: 1}
+  m_IndirectSpecularColor: {r: 0.15183248, g: 0.28473803, b: 0.46959427, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8073,7 +8073,7 @@ GameObject:
   - component: {fileID: 1203434733}
   - component: {fileID: 1203434732}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: AudioManagerMusica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12256,7 +12256,7 @@ GameObject:
   - component: {fileID: 1673246261}
   - component: {fileID: 1673246260}
   m_Layer: 0
-  m_Name: AudioManager (1)
+  m_Name: AudioManagerOlas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15066,7 +15066,7 @@ GameObject:
   - component: {fileID: 2065232255}
   - component: {fileID: 2065232254}
   m_Layer: 0
-  m_Name: AudioManager (2)
+  m_Name: AudioManagerLoro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
